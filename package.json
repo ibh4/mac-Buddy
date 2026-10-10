@@ -1,0 +1,33 @@
+{
+  "name": "mcd-buddy",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Mac-Buddy · 麦麦搭子：记得你的老样子，也懂你想换换口味。基于麦当劳 MCP 的独立开发者参赛作品（非官方产品）。",
+  "type": "module",
+  "workspaces": [
+    "apps/server",
+    "apps/web"
+  ],
+  "scripts": {
+    "dev": "concurrently -n server,web -c green,cyan \"npm:dev:server\" \"npm:dev:web\"",
+    "dev:server": "npm -w @mcd-buddy/server run dev",
+    "dev:web": "npm -w @mcd-buddy/web run dev",
+    "build": "npm run build:server && npm run build:web",
+    "build:server": "npm -w @mcd-buddy/server run build",
+    "build:web": "npm -w @mcd-buddy/web run build",
+    "start": "npm -w @mcd-buddy/server run start",
+    "preview:web": "npm -w @mcd-buddy/web run preview",
+    "test": "vitest run",
+    "typecheck": "npm -w @mcd-buddy/server exec tsc --noEmit && npm -w @mcd-buddy/web exec tsc --noEmit",
+    "demo": "cross-env FORCE_DEMO_MODE=true npm -w @mcd-buddy/server run start"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1",
+    "cross-env": "^7.0.3",
+    "typescript": "^5.5.4",
+    "vitest": "^2.1.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

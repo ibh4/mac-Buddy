@@ -1,0 +1,27 @@
+{
+  "_note": "虚构示例餐单，仅用于说明数据结构。商品编码（MC001/FR01 等）只在演示库内有效，不是麦当劳官方商品编码，不能用于下单。真实编码来自 query-meals / query-meal-detail。",
+  "storeCode": "DSTORE01",
+  "storeName": "麦麦餐厅（演示·阳光店）",
+  "orderType": 1,
+  "beType": 1,
+  "items": [
+    {
+      "productCode": "MC001",
+      "productName": "巨无霸套餐",
+      "quantity": 1,
+      "comboItemList": [
+        { "productCode": "MA01", "name": "巨无霸", "quantity": 1 },
+        { "productCode": "FR01", "name": "中薯条", "quantity": 1 },
+        { "productCode": "DR01", "name": "可乐（中）", "quantity": 1 }
+      ]
+    },
+    { "productCode": "FR01", "productName": "中薯条", "quantity": 1 },
+    {
+      "productCode": "CF01",
+      "productName": "美式咖啡",
+      "quantity": 1,
+      "modification": { "values": [{ "code": "M_NOICE", "key": "ice", "quantity": 1 }] }
+    }
+  ],
+  "_nutritionNote": "营养计算时套餐只累计 comboItemList 的组成项，不重复计入套餐本身；含 modification 的项会标注“特制后的营养变化未知”。"
+}

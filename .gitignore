@@ -1,0 +1,85 @@
+# ============================================================
+# mcd-buddy / Mac-Buddy · 麦麦搭子
+# 目标：忽略真正的本地产物与隐私数据，但保留示例、迁移、锁文件与文档。
+# ============================================================
+
+# ---------- 依赖 ----------
+node_modules/
+.pnp/
+.pnp.js
+.yarn/
+
+# ---------- 构建产物 ----------
+dist/
+apps/web/dist/
+apps/server/dist/
+build/
+*.tsbuildinfo
+.vite/
+.cache/
+
+# ---------- 本地环境与密钥（绝不提交真实 Token） ----------
+.env
+.env.*
+!.env.example
+apps/server/.env
+apps/web/.env
+*.local
+*.pem
+*.key
+*.p12
+*.pfx
+# 凭据文件（若曾经把 token 存成文件，务必不要提交）
+credentials.json
+*token*.txt
+.secrets/
+
+# ---------- 本地 SQLite 数据（餐单/版本/订单缓存，含用户隐私） ----------
+apps/server/data/*.db
+apps/server/data/*.db-journal
+apps/server/data/*.db-wal
+apps/server/data/*.db-shm
+*.sqlite
+*.sqlite3
+
+# ---------- 私有数据：真实订单、偏好、原始接口响应 ----------
+private/
+examples/private/
+docs/private/
+*.raw.json
+mcp-responses/
+order-history/
+sync-cache/
+
+# ---------- 日志 ----------
+logs/
+*.log
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ---------- 测试/临时产物 ----------
+coverage/
+.nyc_output/
+tmp/
+temp/
+
+# ---------- 编辑器 / 系统 ----------
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# ---------- MCP 运行时产物 ----------
+.mcp-session
+.mcp-session-id
+.mcp/
+
+# ---------- 本地 Agent 状态（不随仓库分发） ----------
+.workbuddy/
+
+# ---------- 参考素材 / 归档（第三方或非本项目内容，不随仓库分发） ----------
+Burger-Theme-Website-main.zip
+README例子.md
