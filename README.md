@@ -16,11 +16,8 @@ _Your taste. Your Buddy._
   <img alt="License" src="https://img.shields.io/badge/License-MIT-22C55E?style=for-the-badge">
 </p>
 
-<!-- 封面图：请把图片放到 docs/images/cover.png（或把 src 换成上传到 GitHub 后的图片地址） -->
-<img width="1380" alt="Mac-Buddy · 麦麦搭子 封面" src="docs/images/cover.png">
+<img width="1672" height="941" alt="麦麦搭子：可爱点餐助手" src="https://github.com/user-attachments/assets/67ffe211-a56b-4c57-8221-7538651bab0c" />
 
-<!-- 网页截图：请把图片放到 docs/images/screenshot.png（用演示模式截取，避免泄露隐私） -->
-<img width="1380" alt="Mac-Buddy · 麦麦搭子 网页界面" src="docs/images/screenshot.png">
 
 <p>
   <b>参赛名称</b>：Mac-Buddy 麦麦搭子——懂你口味的点餐助手　|　<b>仓库</b>：mac-Buddy　|　<b>Skill</b>：mcd-buddy　|　<b>定位</b>：非官方产品
@@ -39,7 +36,24 @@ _Your taste. Your Buddy._
 ## 为什么做这个
 
 点麦当劳最费神的不是「想吃什么」，而是「每次都要重新点一遍」。
+flowchart LR
+    A["我的老样子 · 记住常点搭配"]:::usual
+    B["照旧 / 微调 · 保留喜欢的"]:::adjust
+    C["随机 / 食签 · 换换新口味"]:::random
+    D["营养与核价 · 吃得明白"]:::check
+    E["预览确认 · 再下单"]:::order
 
+    A --> B
+    A --> C
+    B --> D
+    C --> D
+    D --> E
+
+    classDef usual fill:#FFC72C,stroke:#E3A008,color:#3B2921,stroke-width:3px;
+    classDef adjust fill:#DA291C,stroke:#FECACA,color:#FFFFFF,stroke-width:2px;
+    classDef random fill:#7C3AED,stroke:#DDD6FE,color:#FFFFFF,stroke-width:2px;
+    classDef check fill:#2563EB,stroke:#BFDBFE,color:#FFFFFF,stroke-width:2px;
+    classDef order fill:#14B8A6,stroke:#99F6E4,color:#042F2E,stroke-width:2px;
 有固定习惯的人，每次下单都在重复同一套动作：找到常点的那几个、确认还有货、再核对一遍价格。想换一点，又怕动到不想动的地方；想省一点，又不知道今天门店有没有真能用的券。
 
 Mac-Buddy 把「我常点的那一套」存成本地可版本化的**老样子**，然后围绕它做几件事：
@@ -54,6 +68,7 @@ Mac-Buddy 把「我常点的那一套」存成本地可版本化的**老样子**
 **核心承诺：不替你做决定。** 冲突时只说明原因并给出可放宽项，绝不自动突破你设的约束。
 
 ---
+<img width="1883" height="1383" alt="16228410-5ef2-42fe-91ec-44e69bb5195e" src="https://github.com/user-attachments/assets/bae0e375-ce6a-48d0-b65d-158bc59bb7b6" />
 
 ## 功能一览
 
