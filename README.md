@@ -36,6 +36,8 @@ _Your taste. Your Buddy._
 ## 为什么做这个
 
 点麦当劳最费神的不是「想吃什么」，而是「每次都要重新点一遍」。
+
+```mermaid
 flowchart LR
     A["我的老样子 · 记住常点搭配"]:::usual
     B["照旧 / 微调 · 保留喜欢的"]:::adjust
@@ -54,7 +56,7 @@ flowchart LR
     classDef random fill:#7C3AED,stroke:#DDD6FE,color:#FFFFFF,stroke-width:2px;
     classDef check fill:#2563EB,stroke:#BFDBFE,color:#FFFFFF,stroke-width:2px;
     classDef order fill:#14B8A6,stroke:#99F6E4,color:#042F2E,stroke-width:2px;
-有固定习惯的人，每次下单都在重复同一套动作：找到常点的那几个、确认还有货、再核对一遍价格。想换一点，又怕动到不想动的地方；想省一点，又不知道今天门店有没有真能用的券。
+```
 
 Mac-Buddy 把「我常点的那一套」存成本地可版本化的**老样子**，然后围绕它做几件事：
 
